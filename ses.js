@@ -1,20 +1,24 @@
 const Discord = require('discord.js');
 const tokens = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "Tokenler işte kafanıza göre çoğaltın"
+    "BOT TOKENLERI",
+    "BOT TOKENLERI",
+    "BOT TOKENLERI",
+    "BOT TOKENLERI",
+    "BOT TOKENLERI",
+    "BOT TOKENLERI",
+    "BOT TOKENLERI"
 ];
+
 const chnls = [
-    "kanallar falan ",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "SESLI KANAL ID",
+    "SESLI KANAL ID",
+    "SESLI KANAL ID",
+    "SESLI KANAL ID",
+    "SESLI KANAL ID",
+    "SESLI KANAL ID",
+    "SESLI KANAL ID"
 ];
+
 const selamlı = [];
 for (let index = 0; index < tokens.length; index++) {
     const token = tokens[index];
@@ -22,8 +26,19 @@ for (let index = 0; index < tokens.length; index++) {
     client.login(token);
     let concon;
     client.on('ready', async () => {
+        client.user.setStatus("idle");
         console.log(client.user.username);
-        client.user.setPresence({ activity: { name: "null voice" }, status: "idle" });
+        setInterval(() => {
+            const am = [
+             "null 💛 Spanker",
+             "null 💙 Spanker",
+             "null 🖤 Spanker",
+             "null ❤️ Spanker"
+
+            ];
+        const yarrak = Math.floor(Math.random() * (am.length));
+        client.user.setActivity(`${am[yarrak]}`, {type: "LISTENING"});
+    }, 10000);
         concon = await client.channels.cache.get(chnls[index]).join().catch(err => console.error("Ses kanalına giriş başarısız"));
     });
     let ses;
@@ -31,17 +46,18 @@ for (let index = 0; index < tokens.length; index++) {
         if (cur.member.user.bot) return;
         if (cur.channel && (cur.channel.id === chnls[index])) {
             if (cur.channelID === prev.channelID) return;
-            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("Register rölünün id falan filan").rawPosition)) {
-                console.log(selamlı);
+            if (selamlı.includes(cur.member.id) && (cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("REGISTER ROL ID").rawPosition)) {
                 ses = await concon.play('./hg.mp3');
                 return;
             }
-            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("Register rölünün id falan filan").rawPosition)) {
+            if ((cur.member.roles.highest.rawPosition < cur.guild.roles.cache.get("REGISTER ROL ID").rawPosition)) {
                 ses = await concon.play('./hg.mp3');
                 selamlı.push(cur.member.user.id);
-            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get("Register rölünün id falan filan").rawPosition) {
+                console.log(selamlı);
+            } else if (cur.member.roles.highest.rawPosition > cur.guild.roles.cache.get("REGISTER ROL ID").rawPosition) {
                 ses = await concon.play('./yt.mp3');
                 selamlı.push(cur.member.user.id);
+                console.log(selamlı);
             }
         }
         if (prev.channel && (prev.channel.id === chnls[index]) && (prev.channel.members.size === 1) && ses) ses.end();
@@ -60,4 +76,5 @@ for (let index = 0; index < tokens.length; index++) {
         newState.setSelfDeaf(true);
         }
         });
+
 }

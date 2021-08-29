@@ -1,6 +1,6 @@
 echo off
 color a
-title Welcome
+title null-welcome-amk
 cls
 :a
 node ses.js
