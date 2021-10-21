@@ -2,6 +2,10 @@
 
 ###### Herkese selam
 ###### Kafama göre değiştirdim öyle takılıyoruz sizde bişeyler deneyin.
+# Yenilikler
+###### Değişen oynuyor falan
+###### birde config ekledim yarram.json doldurursunuz :D
+
 # Çok soran oldu
 
 ###### Neden botlarda küfür kullanıyorsun diye 
