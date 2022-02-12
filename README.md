@@ -1,10 +1,11 @@
 # 🔊 null welcome
 ######  Herkese selam
 ######  yeni versiyon sizlerle.
+######  0.0.3
 
 # 🌟 Yenilikler
 ###### Değişen oynuyor
-###### Ses logu
+###### Ses logu hataları giderildi.
 ###### Main ve json dosyalarında değişiklerler.
 
 # 🎀 Açıklama
