@@ -10,7 +10,7 @@
 
 # 🎀 Açıklama
 ###### Jaylen ozi mi ney ismi amına koyayım her güncellemede bakıp bakıp geçiriyor amına koyayım adamlar gelip ozi bot diyor :D
-###### siktir git kendi botuna kendi sesini koy ayrıca
+###### siktir git kendi botuna kendi sesini koy ayrıca benden alıp koyuyorsun 
 ###### Bot işlerinden sıkıldım son güncelleme bu olucaktır.
 
 
